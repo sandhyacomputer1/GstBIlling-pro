@@ -3,264 +3,986 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GSTBilling Pro - Privacy Policy</title>
-
+<title>Privacy Policy | GSTBilling Pro - Sandhya SoftTech Pvt. Ltd.</title>
+<meta name="description" content="Privacy Policy for GSTBilling Pro Android application by Sandhya SoftTech Pvt. Ltd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
-body{
-font-family:Arial,Helvetica,sans-serif;
-max-width:900px;
-margin:auto;
-padding:40px;
-line-height:1.8;
-color:#333;
-background:#ffffff;
-}
-h1,h2{
-color:#1565C0;
-}
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:15px;
-}
-table,th,td{
-border:1px solid #ddd;
-}
-th,td{
-padding:10px;
-text-align:left;
-}
+  :root{
+    --primary:#1565C0;
+    --primary-dark:#0D47A1;
+    --primary-light:#5E92F3;
+    --primary-tint:#E8F1FC;
+    --accent:#00ACC1;
+    --success:#2E7D32;
+    --warning:#EF6C00;
+    --danger:#C62828;
+    --text-main:#1C2733;
+    --text-muted:#5A6B7B;
+    --bg:#F4F7FB;
+    --card-bg:#FFFFFF;
+    --border:#E3E9F0;
+    --shadow-sm:0 2px 8px rgba(21,101,192,0.08);
+    --shadow-md:0 8px 24px rgba(21,101,192,0.12);
+    --shadow-lg:0 16px 40px rgba(21,101,192,0.16);
+    --radius:16px;
+    --radius-sm:10px;
+    --transition:all 0.3s cubic-bezier(.4,0,.2,1);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text-main);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:var(--primary);text-decoration:none;transition:var(--transition);}
+  a:hover{color:var(--primary-dark);text-decoration:underline;}
+
+  img,svg{display:block;max-width:100%;}
+
+  .container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ---------- HEADER ---------- */
+  header.hero{
+    position:relative;
+    background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 55%,var(--primary-light) 100%);
+    color:#fff;
+    padding:64px 0 80px;
+    overflow:hidden;
+    isolation:isolate;
+  }
+
+  header.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.12) 0, transparent 45%),
+                      radial-gradient(circle at 85% 75%, rgba(255,255,255,0.10) 0, transparent 50%);
+    z-index:-1;
+  }
+
+  .hero-content{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto;
+  }
+
+  .hero-icon{
+    width:76px;height:76px;
+    border-radius:22px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(6px);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 22px;
+    font-size:32px;
+    box-shadow:var(--shadow-md);
+    border:1px solid rgba(255,255,255,0.25);
+  }
+
+  .hero-content .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    background:rgba(255,255,255,0.14);
+    padding:6px 16px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+
+  .hero-content h1{
+    font-size:clamp(28px,4.5vw,44px);
+    font-weight:800;
+    letter-spacing:-0.02em;
+    margin-bottom:14px;
+  }
+
+  .hero-content p.sub{
+    font-size:17px;
+    font-weight:300;
+    color:rgba(255,255,255,0.92);
+    margin-bottom:26px;
+  }
+
+  .hero-meta{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    font-size:13.5px;
+  }
+
+  .hero-meta span{
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.2);
+    padding:8px 16px;
+    border-radius:999px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:500;
+  }
+
+  .hero-wave{
+    display:block;
+    width:100%;
+    line-height:0;
+    margin-top:-2px;
+  }
+
+  /* ---------- LAYOUT ---------- */
+  main{
+    max-width:1100px;
+    margin:-48px auto 0;
+    padding:0 24px 40px;
+    position:relative;
+    z-index:2;
+  }
+
+  .layout{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:28px;
+    align-items:start;
+  }
+
+  /* ---------- TOC (SIDEBAR) ---------- */
+  nav.toc{
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-md);
+    padding:22px 18px;
+    position:sticky;
+    top:20px;
+    max-height:calc(100vh - 40px);
+    overflow-y:auto;
+  }
+
+  nav.toc h2{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--text-muted);
+    margin-bottom:14px;
+    font-weight:600;
+    padding-left:6px;
+  }
+
+  nav.toc ol{
+    list-style:none;
+    counter-reset:toc;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+  }
+
+  nav.toc li{counter-increment:toc;}
+
+  nav.toc a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:13.5px;
+    color:var(--text-main);
+    padding:8px 8px;
+    border-radius:8px;
+    font-weight:500;
+    text-decoration:none;
+  }
+
+  nav.toc a::before{
+    content:counter(toc);
+    flex:0 0 auto;
+    width:20px;height:20px;
+    border-radius:6px;
+    background:var(--primary-tint);
+    color:var(--primary);
+    font-size:11px;
+    font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  nav.toc a:hover{
+    background:var(--primary-tint);
+    color:var(--primary-dark);
+  }
+
+  /* ---------- CONTENT CARD ---------- */
+  .content-wrap{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+  }
+
+  section.card{
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    padding:32px 34px;
+    border:1px solid var(--border);
+    transition:var(--transition);
+    scroll-margin-top:20px;
+  }
+
+  section.card:hover{
+    box-shadow:var(--shadow-md);
+    transform:translateY(-2px);
+  }
+
+  section.card h2{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:21px;
+    font-weight:700;
+    color:var(--primary-dark);
+    margin-bottom:16px;
+  }
+
+  section.card h2 .num{
+    flex:0 0 auto;
+    width:38px;height:38px;
+    border-radius:11px;
+    background:var(--primary-tint);
+    color:var(--primary);
+    display:flex;align-items:center;justify-content:center;
+    font-size:16px;
+  }
+
+  section.card h3{
+    font-size:16px;
+    font-weight:600;
+    color:var(--text-main);
+    margin:18px 0 8px;
+  }
+
+  section.card p{
+    color:var(--text-muted);
+    font-size:15px;
+    margin-bottom:12px;
+    font-weight:300;
+  }
+
+  section.card ul{
+    margin:8px 0 12px 0;
+    padding-left:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+
+  section.card ul li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:14.5px;
+    color:var(--text-muted);
+    font-weight:300;
+  }
+
+  section.card ul li i{
+    color:var(--primary);
+    font-size:13px;
+    margin-top:4px;
+    flex:0 0 auto;
+  }
+
+  /* sub-item chips (business info fields, auth methods etc.) */
+  .field-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px;
+    margin:14px 0 6px;
+  }
+
+  .field-chip{
+    background:var(--primary-tint);
+    border:1px solid #D3E5FA;
+    border-radius:var(--radius-sm);
+    padding:12px 14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:13.5px;
+    font-weight:500;
+    color:var(--primary-dark);
+    transition:var(--transition);
+  }
+
+  .field-chip:hover{
+    background:#DAEAFB;
+    transform:translateY(-2px);
+  }
+
+  .field-chip i{color:var(--primary);font-size:14px;}
+
+  .field-chip .optional-tag{
+    margin-left:auto;
+    font-size:10px;
+    background:#FFF3E0;
+    color:var(--warning);
+    padding:2px 8px;
+    border-radius:999px;
+    font-weight:700;
+    letter-spacing:.03em;
+  }
+
+  /* ---------- INFO CARD VARIANTS ---------- */
+  .info-card{
+    border-radius:var(--radius-sm);
+    padding:20px 22px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    margin-top:16px;
+    border:1px solid transparent;
+  }
+
+  .info-card i.icon{
+    font-size:22px;
+    flex:0 0 auto;
+    width:44px;height:44px;
+    border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .info-card h4{font-size:15px;font-weight:700;margin-bottom:6px;}
+  .info-card p{font-size:14px;margin:0;font-weight:300;}
+
+  .info-card.security{
+    background:linear-gradient(135deg,#E8F5E9,#F1FBF2);
+    border-color:#C8E6C9;
+  }
+  .info-card.security i.icon{background:#C8E6C9;color:var(--success);}
+  .info-card.security h4{color:var(--success);}
+
+  .info-card.protection{
+    background:linear-gradient(135deg,#E3F2FD,#EEF6FE);
+    border-color:#BBDEFB;
+  }
+  .info-card.protection i.icon{background:#BBDEFB;color:var(--primary-dark);}
+  .info-card.protection h4{color:var(--primary-dark);}
+
+  .info-card.notice{
+    background:linear-gradient(135deg,#FFF3E0,#FFF8ED);
+    border-color:#FFE0B2;
+  }
+  .info-card.notice i.icon{background:#FFE0B2;color:var(--warning);}
+  .info-card.notice h4{color:var(--warning);}
+
+  .info-card.contact{
+    background:linear-gradient(135deg,#E0F7FA,#EEFCFD);
+    border-color:#B2EBF2;
+  }
+  .info-card.contact i.icon{background:#B2EBF2;color:var(--accent);}
+  .info-card.contact h4{color:#00838F;}
+
+  /* ---------- HIGHLIGHT STRIP (key statements) ---------- */
+  .highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:14px;
+    margin-top:8px;
+  }
+
+  .highlight-item{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-left:4px solid var(--primary);
+    border-radius:var(--radius-sm);
+    padding:16px 18px;
+    box-shadow:var(--shadow-sm);
+    transition:var(--transition);
+  }
+
+  .highlight-item:hover{
+    box-shadow:var(--shadow-md);
+    transform:translateY(-3px);
+    border-left-color:var(--accent);
+  }
+
+  .highlight-item i{color:var(--primary);font-size:18px;margin-bottom:8px;display:block;}
+  .highlight-item p{font-size:13.5px;margin:0;color:var(--text-main);font-weight:500;}
+
+  /* ---------- TABLE ---------- */
+  .table-wrap{
+    overflow-x:auto;
+    border-radius:var(--radius-sm);
+    box-shadow:var(--shadow-sm);
+    border:1px solid var(--border);
+    margin-top:16px;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:560px;
+  }
+
+  thead tr{
+    background:linear-gradient(135deg,var(--primary-dark),var(--primary));
+  }
+
+  thead th{
+    color:#fff;
+    text-align:left;
+    padding:14px 18px;
+    font-size:13.5px;
+    font-weight:600;
+    letter-spacing:.02em;
+  }
+
+  tbody td{
+    padding:13px 18px;
+    font-size:14px;
+    color:var(--text-main);
+    border-bottom:1px solid var(--border);
+    font-weight:300;
+  }
+
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:nth-child(even){background:#FAFCFE;}
+  tbody tr{transition:var(--transition);}
+  tbody tr:hover{background:var(--primary-tint);}
+
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:4px 12px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:600;
+  }
+
+  .badge.required{background:#FFEBEE;color:var(--danger);}
+  .badge.optional{background:#FFF3E0;color:var(--warning);}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{
+    border:1px solid var(--border);
+    border-radius:var(--radius-sm);
+    margin-bottom:12px;
+    overflow:hidden;
+    transition:var(--transition);
+  }
+
+  .faq-item:hover{box-shadow:var(--shadow-sm);}
+
+  .faq-q{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:16px 18px;
+    background:var(--primary-tint);
+    font-weight:600;
+    font-size:14.5px;
+    color:var(--primary-dark);
+  }
+
+  .faq-q i{color:var(--primary);font-size:15px;}
+
+  .faq-a{
+    padding:14px 18px 16px 48px;
+    font-size:14px;
+    color:var(--text-muted);
+    font-weight:300;
+    background:#fff;
+  }
+
+  /* ---------- CONTACT SECTION ---------- */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+    margin-top:16px;
+  }
+
+  .contact-tile{
+    background:linear-gradient(135deg,var(--primary-dark),var(--primary));
+    color:#fff;
+    border-radius:var(--radius-sm);
+    padding:22px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    box-shadow:var(--shadow-md);
+    transition:var(--transition);
+  }
+
+  .contact-tile:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+
+  .contact-tile i{font-size:22px;flex:0 0 auto;
+    width:46px;height:46px;border-radius:12px;
+    background:rgba(255,255,255,0.18);
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .contact-tile a{color:#fff;font-weight:600;font-size:14.5px;}
+  .contact-tile span.label{display:block;font-size:12px;opacity:.85;margin-bottom:2px;font-weight:400;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:#0F2444;
+    color:rgba(255,255,255,0.85);
+    text-align:center;
+    padding:36px 20px 28px;
+    margin-top:8px;
+  }
+
+  footer .footer-logo{
+    font-weight:700;
+    font-size:17px;
+    color:#fff;
+    margin-bottom:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+  }
+
+  footer p{font-size:13px;color:rgba(255,255,255,0.65);margin:2px 0;}
+
+  footer .footer-links{
+    margin-top:14px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+
+  footer .footer-links a{
+    color:rgba(255,255,255,0.8);
+    font-size:13px;
+  }
+
+  footer .footer-links a:hover{color:#fff;}
+
+  /* ---------- BACK TO TOP ---------- */
+  .back-top{
+    position:fixed;
+    bottom:26px;
+    right:26px;
+    width:46px;height:46px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:var(--shadow-lg);
+    text-decoration:none;
+    font-size:17px;
+    transition:var(--transition);
+    z-index:50;
+  }
+
+  .back-top:hover{background:var(--primary-dark);transform:translateY(-4px);text-decoration:none;color:#fff;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .layout{grid-template-columns:1fr;}
+    nav.toc{
+      position:relative;
+      top:0;
+      max-height:none;
+    }
+    nav.toc ol{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    }
+  }
+
+  @media (max-width:600px){
+    header.hero{padding:48px 0 64px;}
+    section.card{padding:24px 20px;}
+    main{margin-top:-40px;}
+    .hero-meta{font-size:12px;}
+    .faq-a{padding-left:18px;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;animation:none !important;}
+  }
 </style>
-
 </head>
-
 <body>
 
-<h1>Privacy Policy</h1>
-
-<p><strong>Effective Date:</strong> 27 July 2026</p>
-
-<p>
-GSTBilling Pro ("the App") is developed and maintained by
-<strong>Sandhya SoftTech Pvt. Ltd.</strong>
-
-This Privacy Policy explains how we collect, use, store and protect your information when you use GSTBilling Pro.
-By using this application, you agree to the practices described in this Privacy Policy.
-</p>
-
-<h2>1. Information We Collect</h2>
-
-<p>The application may collect the following information:</p>
-
-<table>
-
-<tr>
-<th>Information</th>
-<th>Purpose</th>
-</tr>
-
-<tr>
-<td>Business Name</td>
-<td>Create business profile</td>
-</tr>
-
-<tr>
-<td>Business Type</td>
-<td>Business categorization</td>
-</tr>
-
-<tr>
-<td>Owner Name</td>
-<td>Account identification</td>
-</tr>
-
-<tr>
-<td>Mobile Number</td>
-<td>Login and account verification</td>
-</tr>
-
-<tr>
-<td>PIN</td>
-<td>Secure authentication</td>
-</tr>
-
-<tr>
-<td>Email Address (Optional)</td>
-<td>Communication</td>
-</tr>
-
-<tr>
-<td>GSTIN (Optional)</td>
-<td>GST invoice generation</td>
-</tr>
-
-<tr>
-<td>Business Address</td>
-<td>Invoice printing</td>
-</tr>
-
-<tr>
-<td>PIN Code</td>
-<td>Business location</td>
-</tr>
-
-</table>
-
-<h2>2. Information Generated by Users</h2>
-
-<p>
-The application stores business records created by users including:
-</p>
-
-<ul>
-
-<li>Customers</li>
-
-<li>Products</li>
-
-<li>Invoices</li>
-
-<li>Sales</li>
-
-<li>Purchase Records</li>
-
-<li>Business Reports</li>
-
-<li>GST Billing Information</li>
-
-</ul>
-
-<h2>3. How We Use Information</h2>
-
-<p>Your information is used to:</p>
-
-<ul>
-
-<li>Create your business account.</li>
-
-<li>Authenticate your login.</li>
-
-<li>Generate GST invoices.</li>
-
-<li>Maintain customer and product records.</li>
-
-<li>Provide reports and analytics.</li>
-
-<li>Improve application performance.</li>
-
-<li>Provide customer support.</li>
-
-</ul>
-
-<h2>4. Firebase Services</h2>
-
-<p>
-GSTBilling Pro uses Google Firebase services including:
-</p>
-
-<ul>
-
-<li>Firebase Realtime Database</li>
-
-<li>Firebase Authentication (if enabled)</li>
-
-<li>Firebase Cloud Messaging (if enabled)</li>
-
-</ul>
-
-<p>
-Firebase securely stores application data using Google's infrastructure.
-</p>
-
-<h2>5. Data Sharing</h2>
-
-<p>
-We do not sell, rent or trade your personal information.
-
-Your information is shared only when required to operate the application or comply with applicable law.
-</p>
-
-<h2>6. Data Security</h2>
-
-<p>
-We implement reasonable technical and administrative safeguards to protect your information against unauthorized access, alteration, disclosure or destruction.
-</p>
-
-<h2>7. Data Retention</h2>
-
-<p>
-Your information remains stored while your account is active.
-
-If you request account deletion, your personal information will be removed within a reasonable period unless retention is required by law.
-</p>
-
-<h2>8. Account Deletion</h2>
-
-<p>
-Users may request deletion of their account and associated business data by contacting us.
-
-After verification, eligible account information will be permanently removed from our database.
-</p>
-
-<h2>9. Children's Privacy</h2>
-
-<p>
-GSTBilling Pro is intended for business users.
-
-The application is not directed toward children under 13 years of age.
-
-We do not knowingly collect information from children.
-</p>
-
-<h2>10. Third-Party Services</h2>
-
-<p>
-The application may use third-party services including Google Firebase for secure cloud storage and application functionality.
-</p>
-
-<h2>11. Your Rights</h2>
-
-<p>You may request to:</p>
-
-<ul>
-
-<li>Access your personal information.</li>
-
-<li>Correct inaccurate information.</li>
-
-<li>Delete your account.</li>
-
-<li>Request information regarding stored data.</li>
-
-</ul>
-
-<h2>12. Changes to this Privacy Policy</h2>
-
-<p>
-We may update this Privacy Policy from time to time.
-
-Changes become effective immediately after being published on this page.
-</p>
-
-<h2>13. Contact Us</h2>
-
-<p>
-
-<strong>Sandhya SoftTech Pvt. Ltd.</strong>
-
-<br><br>
-
-Website:
-<a href="https://sandhyasofttech.com">
-https://sandhyasofttech.com
-</a>
-
-<br><br>
-
-Email:
-support@sandhyasofttech.com
-
-</p>
+<header class="hero">
+  <div class="container hero-content">
+    <div class="hero-icon"><i class="fa-solid fa-file-shield"></i></div>
+    <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Privacy &amp; Data Protection</span>
+    <h1>Privacy Policy</h1>
+    <p class="sub">GSTBilling Pro — GST Billing &amp; Invoicing App by Sandhya SoftTech Pvt. Ltd.</p>
+    <div class="hero-meta">
+      <span><i class="fa-regular fa-calendar"></i> Effective Date: 27 July 2026</span>
+      <span><i class="fa-solid fa-mobile-screen-button"></i> App: GSTBilling Pro</span>
+      <span><i class="fa-solid fa-building"></i> Sandhya SoftTech Pvt. Ltd.</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="layout">
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#info-collect">Information We Collect</a></li>
+        <li><a href="#business-info">Business Information</a></li>
+        <li><a href="#customer-info">Customer Information</a></li>
+        <li><a href="#product-info">Product Information</a></li>
+        <li><a href="#invoice-info">Invoice Information</a></li>
+        <li><a href="#gst-data">GST Billing Data</a></li>
+        <li><a href="#authentication">Authentication</a></li>
+        <li><a href="#firebase">Firebase Usage</a></li>
+        <li><a href="#how-we-use">How We Use Your Information</a></li>
+        <li><a href="#storage">Data Storage</a></li>
+        <li><a href="#security">Data Security</a></li>
+        <li><a href="#sharing">Data Sharing</a></li>
+        <li><a href="#third-party">Third Party Services</a></li>
+        <li><a href="#retention">Data Retention</a></li>
+        <li><a href="#user-rights">User Rights</a></li>
+        <li><a href="#account-deletion">Account Deletion</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#cookies">Cookies &amp; Analytics</a></li>
+        <li><a href="#changes">Changes to this Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <div class="content-wrap">
+
+      <!-- 1. INTRODUCTION -->
+      <section class="card" id="introduction">
+        <h2><span class="num"><i class="fa-solid fa-book-open"></i></span>1. Introduction</h2>
+        <p>Welcome to <strong>GSTBilling Pro</strong> ("we", "our", "us", "the App"), developed and maintained by <strong>Sandhya SoftTech Pvt. Ltd.</strong> ("the Company"). This Privacy Policy explains how we collect, use, store, and protect information when you use our Android application for GST billing, invoicing, and business management.</p>
+        <p>By downloading, installing, or using GSTBilling Pro, you agree to the collection and use of information in accordance with this Privacy Policy. We are committed to protecting your privacy and ensuring transparency about the data we handle.</p>
+      </section>
+
+      <!-- 2. INFORMATION WE COLLECT -->
+      <section class="card" id="info-collect">
+        <h2><span class="num"><i class="fa-solid fa-database"></i></span>2. Information We Collect</h2>
+        <p>To provide GST billing and invoicing services, GSTBilling Pro collects the following categories of information:</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Business information provided during registration and setup</li>
+          <li><i class="fa-solid fa-check"></i> Customer details entered by you for invoicing purposes</li>
+          <li><i class="fa-solid fa-check"></i> Product and inventory information</li>
+          <li><i class="fa-solid fa-check"></i> Invoice and GST billing records</li>
+          <li><i class="fa-solid fa-check"></i> Authentication details (mobile number and PIN)</li>
+          <li><i class="fa-solid fa-check"></i> Basic device and app usage information for troubleshooting</li>
+        </ul>
+      </section>
+
+      <!-- 3. BUSINESS INFORMATION -->
+      <section class="card" id="business-info">
+        <h2><span class="num"><i class="fa-solid fa-briefcase"></i></span>3. Business Information</h2>
+        <p>When you set up your business profile, we collect the following details to generate accurate GST invoices and reports:</p>
+        <div class="field-grid">
+          <div class="field-chip"><i class="fa-solid fa-store"></i>Business Name</div>
+          <div class="field-chip"><i class="fa-solid fa-industry"></i>Business Type</div>
+          <div class="field-chip"><i class="fa-solid fa-user-tie"></i>Owner Name</div>
+          <div class="field-chip"><i class="fa-solid fa-receipt"></i>GSTIN<span class="optional-tag">Optional</span></div>
+          <div class="field-chip"><i class="fa-solid fa-phone"></i>Mobile Number</div>
+          <div class="field-chip"><i class="fa-solid fa-envelope"></i>Email Address<span class="optional-tag">Optional</span></div>
+          <div class="field-chip"><i class="fa-solid fa-location-dot"></i>Business Address</div>
+          <div class="field-chip"><i class="fa-solid fa-map-pin"></i>PIN Code</div>
+        </div>
+        <p style="margin-top:14px;">GSTIN and Email Address are <strong>optional fields</strong> — you can use core app features without providing them, though certain GST-compliant invoice formats may require a valid GSTIN.</p>
+      </section>
+
+      <!-- 4. CUSTOMER INFORMATION -->
+      <section class="card" id="customer-info">
+        <h2><span class="num"><i class="fa-solid fa-users"></i></span>4. Customer Information</h2>
+        <p>GSTBilling Pro allows you to save your customers' details — such as name, contact number, address, and GSTIN — to generate invoices quickly. This information is entered and managed entirely by you (the business owner) and is used solely for billing and record-keeping within your business account.</p>
+      </section>
+
+      <!-- 5. PRODUCT INFORMATION -->
+      <section class="card" id="product-info">
+        <h2><span class="num"><i class="fa-solid fa-boxes-stacked"></i></span>5. Product Information</h2>
+        <p>The App stores details of products and services you sell, including product name, description, price, HSN/SAC code, GST rate, and stock quantity. This data helps generate accurate, GST-compliant invoices and track inventory.</p>
+      </section>
+
+      <!-- 6. INVOICE INFORMATION -->
+      <section class="card" id="invoice-info">
+        <h2><span class="num"><i class="fa-solid fa-file-invoice"></i></span>6. Invoice Information</h2>
+        <p>Every invoice generated through the App — including invoice number, date, itemized billing details, tax breakdown, and payment status — is securely stored so you can retrieve, edit, print, or share it as a PDF at any time.</p>
+      </section>
+
+      <!-- 7. GST BILLING DATA -->
+      <section class="card" id="gst-data">
+        <h2><span class="num"><i class="fa-solid fa-percent"></i></span>7. GST Billing Data</h2>
+        <p>GST-specific data such as CGST, SGST, IGST calculations, tax slabs, and GSTIN details of both business and customers are processed within the App to help you remain GST-compliant. This data is used exclusively for invoice generation and reporting purposes and is not used for any unrelated purpose.</p>
+      </section>
+
+      <!-- 8. AUTHENTICATION -->
+      <section class="card" id="authentication">
+        <h2><span class="num"><i class="fa-solid fa-key"></i></span>8. Authentication</h2>
+        <p>GSTBilling Pro uses secure authentication methods to protect access to your business data:</p>
+        <div class="field-grid">
+          <div class="field-chip"><i class="fa-solid fa-mobile-screen"></i>Mobile Number Login</div>
+          <div class="field-chip"><i class="fa-solid fa-lock"></i>PIN Login</div>
+        </div>
+        <p style="margin-top:14px;">Your <strong>Mobile Number</strong> is used as the primary identifier for authentication, and your <strong>PIN</strong> adds an extra layer of security for quick, secure access to your account.</p>
+      </section>
+
+      <!-- 9. FIREBASE USAGE -->
+      <section class="card" id="firebase">
+        <h2><span class="num"><i class="fa-solid fa-cloud"></i></span>9. Firebase Usage</h2>
+        <p>GSTBilling Pro uses Google Firebase, a secure cloud platform, to store and sync your business data reliably:</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> <strong>Firebase Realtime Database</strong> — securely stores business, customer, product, and invoice data in the cloud</li>
+          <li><i class="fa-solid fa-check"></i> <strong>Firebase Authentication</strong> (if enabled) — helps verify user identity securely</li>
+          <li><i class="fa-solid fa-check"></i> <strong>Firebase Cloud Messaging</strong> (if enabled) — used to deliver app notifications and updates</li>
+        </ul>
+        <p>Firebase is operated by Google LLC and complies with industry-standard security practices. Your data transmitted to Firebase is encrypted in transit.</p>
+      </section>
+
+      <!-- 10. HOW WE USE YOUR INFORMATION -->
+      <section class="card" id="how-we-use">
+        <h2><span class="num"><i class="fa-solid fa-gears"></i></span>10. How We Use Your Information</h2>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> To create and manage your business profile</li>
+          <li><i class="fa-solid fa-check"></i> To generate GST-compliant invoices and bills</li>
+          <li><i class="fa-solid fa-check"></i> To authenticate and secure your account</li>
+          <li><i class="fa-solid fa-check"></i> To sync your data securely across sessions</li>
+          <li><i class="fa-solid fa-check"></i> To provide customer support and resolve issues</li>
+          <li><i class="fa-solid fa-check"></i> To improve app performance and reliability</li>
+        </ul>
+      </section>
+
+      <!-- 11. DATA STORAGE -->
+      <section class="card" id="storage">
+        <h2><span class="num"><i class="fa-solid fa-server"></i></span>11. Data Storage</h2>
+        <p>Your data is stored securely on Firebase Realtime Database (Google Cloud infrastructure) and, where applicable, locally on your device for offline access. We do not store your data on unsecured or third-party servers outside of Google's trusted infrastructure.</p>
+      </section>
+
+      <!-- 12. DATA SECURITY -->
+      <section class="card" id="security">
+        <h2><span class="num"><i class="fa-solid fa-shield-halved"></i></span>12. Data Security</h2>
+        <p>We implement industry-standard technical and organizational measures to protect your information from unauthorized access, alteration, disclosure, or destruction, including encrypted data transmission, secure Firebase access rules, and restricted internal access.</p>
+        <div class="info-card security">
+          <i class="icon fa-solid fa-lock"></i>
+          <div>
+            <h4>Security Notice</h4>
+            <p>All data transmitted between the App and Firebase is encrypted using industry-standard protocols (HTTPS/TLS). Access to your business data is restricted to your authenticated account only.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13. DATA SHARING -->
+      <section class="card" id="sharing">
+        <h2><span class="num"><i class="fa-solid fa-share-nodes"></i></span>13. Data Sharing</h2>
+        <p>We do <strong>not sell, rent, or trade</strong> your personal or business information to any third party. Your data is used solely to provide and improve the App's services. We may share limited data only with:</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Google Firebase — for secure cloud storage and authentication</li>
+          <li><i class="fa-solid fa-check"></i> Legal authorities — only when required by applicable law</li>
+        </ul>
+        <div class="info-card protection">
+          <i class="icon fa-solid fa-hand-holding-heart"></i>
+          <div>
+            <h4>Data Protection Commitment</h4>
+            <p>We never sell your personal information. Your business and customer data remain private and are used only to power your GST billing experience within the App.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14. THIRD PARTY SERVICES -->
+      <section class="card" id="third-party">
+        <h2><span class="num"><i class="fa-solid fa-puzzle-piece"></i></span>14. Third Party Services</h2>
+        <p>GSTBilling Pro relies on trusted third-party services to operate effectively:</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> <strong>Google Firebase</strong> — cloud database, authentication, and messaging</li>
+          <li><i class="fa-solid fa-check"></i> <strong>Google Play Services</strong> — core Android functionality</li>
+        </ul>
+        <p>These providers have their own privacy policies governing the use of your information, and we encourage you to review Google's Privacy Policy for additional details.</p>
+      </section>
+
+      <!-- 15. DATA RETENTION -->
+      <section class="card" id="retention">
+        <h2><span class="num"><i class="fa-solid fa-box-archive"></i></span>15. Data Retention</h2>
+        <p>We retain your business, customer, product, and invoice data for as long as your account remains active, or as needed to provide you with the App's services. Data is retained to allow you to access historical invoices and reports at any time.</p>
+      </section>
+
+      <!-- 16. USER RIGHTS -->
+      <section class="card" id="user-rights">
+        <h2><span class="num"><i class="fa-solid fa-user-check"></i></span>16. User Rights</h2>
+        <p>As a user of GSTBilling Pro, you have the right to:</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Access the personal and business data we hold about you</li>
+          <li><i class="fa-solid fa-check"></i> Request correction of inaccurate or incomplete data</li>
+          <li><i class="fa-solid fa-check"></i> Request deletion of your data or account</li>
+          <li><i class="fa-solid fa-check"></i> Withdraw consent for optional data collection (e.g., email, GSTIN)</li>
+        </ul>
+        <p>To exercise any of these rights, please contact us using the details in the Contact Us section below.</p>
+      </section>
+
+      <!-- 17. ACCOUNT DELETION -->
+      <section class="card" id="account-deletion">
+        <h2><span class="num"><i class="fa-solid fa-user-slash"></i></span>17. Account Deletion</h2>
+        <p>You may request deletion of your GSTBilling Pro account and associated data at any time by contacting our support team at <a href="mailto:support@sandhyasofttech.com">support@sandhyasofttech.com</a>. Once verified, your account data will be removed from our active systems in accordance with our data retention policy, except where retention is required to comply with legal or regulatory obligations (such as GST record-keeping laws).</p>
+      </section>
+
+      <!-- 18. CHILDREN'S PRIVACY -->
+      <section class="card" id="children">
+        <h2><span class="num"><i class="fa-solid fa-child-reaching"></i></span>18. Children's Privacy</h2>
+        <p>GSTBilling Pro is a business tool intended for use by adults managing GST billing operations. We do not knowingly collect personal information from children under the age of 18. If we become aware that a child has provided us with personal information, we will take steps to delete such information promptly.</p>
+      </section>
+
+      <!-- 19. COOKIES AND ANALYTICS -->
+      <section class="card" id="cookies">
+        <h2><span class="num"><i class="fa-solid fa-cookie-bite"></i></span>19. Cookies and Analytics</h2>
+        <p>GSTBilling Pro, as a native Android application, does not use browser cookies. We may use basic, privacy-respecting analytics (such as crash reporting and app performance metrics) to help us understand app stability and improve the user experience. This data is aggregated and not used to personally identify you.</p>
+      </section>
+
+      <!-- 20. CHANGES TO THIS PRIVACY POLICY -->
+      <section class="card" id="changes">
+        <h2><span class="num"><i class="fa-solid fa-rotate"></i></span>20. Changes to this Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or app features. Any changes will be posted on this page with a revised "Effective Date." We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
+      </section>
+
+      <!-- COMPARISON TABLE -->
+      <section class="card" id="data-table">
+        <h2><span class="num"><i class="fa-solid fa-table"></i></span>Data Collection Overview</h2>
+        <p>A quick summary of the information GSTBilling Pro collects, whether it is required, and why:</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Information Collected</th>
+                <th>Required</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Business Name</td><td><span class="badge required"><i class="fa-solid fa-circle-exclamation"></i>Required</span></td><td>Displayed on invoices and business profile</td></tr>
+              <tr><td>Business Type</td><td><span class="badge required"><i class="fa-solid fa-circle-exclamation"></i>Required</span></td><td>Customizes billing workflow</td></tr>
+              <tr><td>Owner Name</td><td><span class="badge required"><i class="fa-solid fa-circle-exclamation"></i>Required</span></td><td>Business account identification</td></tr>
+              <tr><td>GSTIN</td><td><span class="badge optional"><i class="fa-solid fa-circle-check"></i>Optional</span></td><td>GST-compliant invoice generation</td></tr>
+              <tr><td>Mobile Number</td><td><span class="badge required"><i class="fa-solid fa-circle-exclamation"></i>Required</span></td><td>Account authentication and login</td></tr>
+              <tr><td>Email Address</td><td><span class="badge optional"><i class="fa-solid fa-circle-check"></i>Optional</span></td><td>Support communication and account recovery</td></tr>
+              <tr><td>Business Address</td><td><span class="badge required"><i class="fa-solid fa-circle-exclamation"></i>Required</span></td><td>Displayed on invoices</td></tr>
+              <tr><td>PIN Code</td><td><span class="badge required"><i class="fa-solid fa-circle-exclamation"></i>Required</span></td><td>Address accuracy and tax jurisdiction</td></tr>
+              <tr><td>Customer Details</td><td><span class="badge required"><i class="fa-solid fa-circle-exclamation"></i>Required</span></td><td>Invoice generation and record-keeping</td></tr>
+              <tr><td>Product Data</td><td><span class="badge required"><i class="fa-solid fa-circle-exclamation"></i>Required</span></td><td>Billing, inventory, and GST calculation</td></tr>
+              <tr><td>PIN (App Login)</td><td><span class="badge required"><i class="fa-solid fa-circle-exclamation"></i>Required</span></td><td>Secure app access</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- HIGHLIGHTS -->
+      <section class="card" id="key-commitments">
+        <h2><span class="num"><i class="fa-solid fa-star"></i></span>Our Key Commitments</h2>
+        <div class="highlight-grid">
+          <div class="highlight-item"><i class="fa-solid fa-ban"></i><p>We never sell your personal information to anyone.</p></div>
+          <div class="highlight-item"><i class="fa-solid fa-lock"></i><p>Your data is securely stored and encrypted in transit.</p></div>
+          <div class="highlight-item"><i class="fa-solid fa-cloud-arrow-up"></i><p>Firebase is used for secure, reliable cloud storage.</p></div>
+          <div class="highlight-item"><i class="fa-solid fa-circle-check"></i><p>GSTIN and Email Address are always optional.</p></div>
+          <div class="highlight-item"><i class="fa-solid fa-mobile-screen"></i><p>Mobile Number is used solely for authentication.</p></div>
+          <div class="highlight-item"><i class="fa-solid fa-file-invoice-dollar"></i><p>Business data is stored only to generate GST invoices.</p></div>
+          <div class="highlight-item"><i class="fa-solid fa-trash-can"></i><p>You can request account deletion at any time.</p></div>
+          <div class="highlight-item"><i class="fa-solid fa-pen"></i><p>You may request correction or deletion of your data.</p></div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="card" id="faq">
+        <h2><span class="num"><i class="fa-solid fa-circle-question"></i></span>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-q"><i class="fa-solid fa-angle-right"></i>Is my business data safe with GSTBilling Pro?</div>
+          <div class="faq-a">Yes. Your data is stored on Google Firebase with encrypted transmission and restricted access controls limited to your authenticated account.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q"><i class="fa-solid fa-angle-right"></i>Do I have to provide my GSTIN or Email Address?</div>
+          <div class="faq-a">No, both GSTIN and Email Address are optional. You can use most features of the App without providing them, though a GSTIN may be needed for certain GST-compliant invoice formats.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q"><i class="fa-solid fa-angle-right"></i>How do I delete my account and data?</div>
+          <div class="faq-a">Simply email us at support@sandhyasofttech.com with your account deletion request. We will verify your identity and remove your data in accordance with our data retention policy.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q"><i class="fa-solid fa-angle-right"></i>Does GSTBilling Pro sell my data to advertisers?</div>
+          <div class="faq-a">No. We never sell, rent, or trade your personal or business information to any third party, including advertisers.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q"><i class="fa-solid fa-angle-right"></i>Can I correct incorrect information in my profile?</div>
+          <div class="faq-a">Yes, you can update most information directly within the App. For assistance, you may also contact our support team.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q"><i class="fa-solid fa-angle-right"></i>What happens to my data after account deletion?</div>
+          <div class="faq-a">Your data is removed from our active systems according to company policy, except where retention is legally required, such as for GST record-keeping obligations.</div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="card" id="contact">
+        <h2><span class="num"><i class="fa-solid fa-headset"></i></span>21. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please reach out to us:</p>
+        <div class="contact-grid">
+          <div class="contact-tile">
+            <i class="fa-solid fa-building"></i>
+            <div>
+              <span class="label">Developer</span>
+              <a href="#">Sandhya SoftTech Pvt. Ltd.</a>
+            </div>
+          </div>
+          <div class="contact-tile">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span class="label">Support Email</span>
+              <a href="mailto:support@sandhyasofttech.com">support@sandhyasofttech.com</a>
+            </div>
+          </div>
+          <div class="contact-tile">
+            <i class="fa-solid fa-globe"></i>
+            <div>
+              <span class="label">Website</span>
+              <a href="https://sandhyasofttech.com" target="_blank" rel="noopener noreferrer">sandhyasofttech.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-logo"><i class="fa-solid fa-file-invoice-dollar"></i> GSTBilling Pro</div>
+  <p>&copy; 2026 Sandhya SoftTech Pvt. Ltd.</p>
+  <p>All Rights Reserved.</p>
+  <div class="footer-links">
+    <a href="https://sandhyasofttech.com" target="_blank" rel="noopener noreferrer">Website</a>
+    <a href="mailto:support@sandhyasofttech.com">Support</a>
+    <a href="#introduction">Back to Top</a>
+  </div>
+</footer>
+
+<a href="#introduction" class="back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
 
 </body>
 </html>
